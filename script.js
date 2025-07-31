@@ -1,5 +1,6 @@
 let string="";
 let string2="";
+let string3="";
 
 let buttons=document.querySelectorAll('.btn');
 
@@ -12,6 +13,7 @@ Array.from(buttons).forEach( (button)=>{
     }
 
     else if(e.target.innerHTML=='C'){
+        string3=string;
         string="";
         document.querySelector('input').value=string;
 
@@ -19,32 +21,26 @@ Array.from(buttons).forEach( (button)=>{
     }
 
     else  if(e.target.innerHTML=='M+'){
+        string3=string;
+        let store=string3
+        string2=string2+store;
 
-        string2=Number(string2)+Number(document.querySelector('input').value);
-       
     }
 
     else  if(e.target.innerHTML=='M-'){
-        if(string2==""){
-            string2=document.querySelector('input').value;
+        let store=string3;
+        string2=string2-store;
 
-        }
-        else{
-            string2=Number(string2)-Number(document.querySelector('input').value);
-        }
-        
     }
 
     else  if(e.target.innerHTML=='MC'){
-        string2="";
         
-      
+        string2="";
+
     }
     else  if(e.target.innerHTML=='MR'){
-       
-
-        document.querySelector('input').value=string2;
-     
+        let string4=eval(string2);
+        document.querySelector('input').value=string4;
        
     }
 
