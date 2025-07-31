@@ -1,7 +1,9 @@
 let string="";
+<<<<<<< HEAD
 let string2="";
-let string3="";
 
+=======
+>>>>>>> 89782393110216c41f8575eb68d8d3bbff299464
 let buttons=document.querySelectorAll('.btn');
 
 Array.from(buttons).forEach( (button)=>{
@@ -13,37 +15,49 @@ Array.from(buttons).forEach( (button)=>{
     }
 
     else if(e.target.innerHTML=='C'){
-        string3=string;
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 89782393110216c41f8575eb68d8d3bbff299464
         string="";
         document.querySelector('input').value=string;
 
 
     }
 
+<<<<<<< HEAD
     else  if(e.target.innerHTML=='M+'){
-        string3=string;
-        let store=string3
-        string2=string2+store;
 
-    }
-
-    else  if(e.target.innerHTML=='M-'){
-        let store=string3;
-        string2=string2-store;
-
-    }
-
-    else  if(e.target.innerHTML=='MC'){
-        
-        string2="";
-
-    }
-    else  if(e.target.innerHTML=='MR'){
-        let string4=eval(string2);
-        document.querySelector('input').value=string4;
+        string2=Number(string2)+Number(document.querySelector('input').value);
        
     }
 
+    else  if(e.target.innerHTML=='M-'){
+        if(string2==""){
+            string2=document.querySelector('input').value;
+
+        }
+        else{
+            string2=Number(string2)-Number(document.querySelector('input').value);
+        }
+        
+    }
+
+    else  if(e.target.innerHTML=='MC'){
+        string2="";
+        
+      
+    }
+    else  if(e.target.innerHTML=='MR'){
+       
+
+        document.querySelector('input').value=string2;
+     
+       
+    }
+
+=======
+>>>>>>> 89782393110216c41f8575eb68d8d3bbff299464
 
     else{
         string=string+(e.target.innerHTML);
